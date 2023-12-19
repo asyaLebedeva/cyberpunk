@@ -1,0 +1,148 @@
+doctype html
+html(lang="ru")
+  head
+    meta(charset="urf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Cyberpunk
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=Roboto&family=Teko&display=swap" rel="stylesheet")
+    link(href="css/style.css" rel="stylesheet")
+  body
+    header.header
+      .container
+        .header__top
+          img.header__img(src="../img/logo.svg" alt="Логотип")
+          nav.header__nav
+            ul.header__list
+              li.header__item
+                a.header__link(href="https://www.youtube.com/" target="_blank")
+                  img(src="../img/youtube-icon.svg" alt="Youtube")
+              li.header__item
+                a.header__link(href="https://vk.com/" target="_blank")
+                  img(src="../img/vk-icon.svg" alt="Вконтакте") 
+              li.header__item
+                a.header__link(href="https://en-gb.facebook.com/" target="_blank")
+                  img(src="../img/facebook-icon.svg" alt="Facebook")
+              li.header__item
+                a.header__link(href="https://twitter.com/?lang=en" target="_blank")
+                  img(src="../img/Twitter.svg" alt="Twitter")
+              li.header__item
+                a.header__link(href="https://www.twitch.tv/" target="_blank")
+                  img(src="../img/twitch-icon.svg" alt="Twitch")
+              li.header__item
+                a.header__link(href="https://www.instagram.com/" target="_blank")
+                  img(src="../img/instagram-icon.svg" alt="Instagram")
+        .header__div
+          p.header__p Доступно на <br> всех платформах
+          a.header__btn(href="#" target="_blank") Узнать больше
+    main
+      section.first
+        .container
+          h2.first__title Найт-Сити изменит тебя навсегда!
+          p.first__description #[strong Cyberpunk 2077]
+            |&mdash; приключенческая ролевая игра, действие которой происходит в мегаполисе Найт-Сити, где власть, роскошь и модификации тела ценятся выше всего. Ты играешь за V, наёмника в поисках устройства, позволяющего обрести бессмертие. Ты сможешь менять киберимпланты, навыки и стиль игры своего персонажа, исследуя открытый мир, где твои поступки влияют на ход сюжета и всё, что тебя окружает.
+          .first__pic
+            picture.first__pic__img1
+              source(src="img/cyberpunk-1.png")
+              img.first__img(src="../img/cyberpunk-1.png" alt="Пейзаж игры")
+            picture.first__pic__img2
+              source(src="img/cyberpunk-3.png")
+              img.first__img(src="../img/cyberpunk-3.png" alt="Пейзаж игры")
+            picture.first__pic__img3
+              source(src="img/cyberpunk-2.png")
+              img.first__img(src="../img/cyberpunk-2.png" alt="Пейзаж игры")
+      section.second
+        .pack(style="max-width: 1920px")
+          .container
+            .second__name
+              img.second__name__discount(src="../img/discount.svg" alt="Акция")
+              h2.second__name__title Играй и выигрывай!
+            p.second__p Играй в #[strong Cyberpunk 2077] и получи возможность выиграть консоль #[strong Xbox Series X] или #[strong Sony PlayStation 5!] Заполни форму ниже и приложи скриншот о покупке игры. Итоги розыгрыша будут подведены 1 февраля. Удачи! :&#41;
+            .second__box
+              .second__form
+                form(method="POST" action="https://www.google.com/" id="form-action")
+                  label(for="name")
+                  input.second__form__name(type="text" placeholder="Как тебя зовут?" id="name" minlength="5" maxlength="10" required)
+                  label(for="email")
+                  input.second__form__email(type="email" placeholder="Твой email" id="email" required)
+                  .second__form__filebox
+                    label.second__form__label(for="files" class="btn") Прикрепить файлы
+                    input.second__form__file(id="files" style="display:none;" type="file" multiple required)
+                    span.second__form__span(style="display:block;") .png / .jpg / .pdf
+                  label(for="btn_submit")
+                    button.second__form__btn(type="submit" value="run foo" id="btn_submit") Отправить
+                  .second__form__privacy
+                    label.second__form__privacy__label(for="agree")
+                    input.second__form__privacy__check(type="checkbox" checked=true id="agree")
+                    span.second__form__privacy__agree Согласен на обработку персональных данных
+              .second__image
+                picture.second__image__pic
+                  source(src="../img/devices.png")
+                  img.second__image__pic__1(src="../img/devices.png" alt="Игровые приставки")
+      section.third
+        .container
+          .third__div
+            picture.third__pic
+              source(src="../img/screen.png")
+              img.third__img(src="../img/screen.png" alt="Монитор с Cyberpunk 2077")
+            ul.third__list
+              li.third__item
+                img.third__logo-item(src="../img/hp-logo.svg")
+              li.third__item
+                img.third__logo-item(src="../img/christ.svg")
+              li.third__item
+                img.third__logo-item(src="../img/logo.svg")
+          .third__content
+            h1.third__title Полное погружение вместе с HP
+            p.third__subscribe Погрузись в современные экшен-игры с реалистичным изображением с помощью монитора с диагональю 23,8 дюйма, созданном для отображения максимально насыщенных цветов. Успевай реагировать на любые события с временем отклика 1 мс и частотой в 144 Гц!
+            ul.third__content__list
+              li.third__content__list__item Яркие насыщенные цвета
+              li.third__content__list__item Кристальная четкость изображения
+              li.third__content__list__item Быстрые движения и плавный геймплей
+            a.third__content__btn(href="#" target="_blank") Подробнее
+      section.fourth
+        .container
+          picture.fourth__pic
+            source(src="../img/down-pic.png")
+            img.fourth__img(src="../img/down-pic.png" alt="Обложка игры Cyberpunk 2077")
+          .fourth__box
+            h2.fourth__title Купить игру Cyberpunk 2077
+            h3.fourth__min-title В комплект входит:
+            ul.fourth__list
+              each item in ['Футляр с игровыми дисками', 'Футляр с кодом для загрузки игры и дисками (pc)', 'Справочник с информацией об игровом мире']
+                li.fourth__list__item=item
+            span.fourth__span Выберите платформу:
+            ul.fourth__list-platform
+              li.fourth__item-platform
+                a.fourth__link(href="#" target="_blank")
+                  img.fourth__logo(src="../img/pc__icon.svg" alt="PC")
+              li.fourth__item-platform
+                a.fourth__link(href="#" target="_blank")
+                  img.fourth__logo(src="../img/xbox-icon.svg" alt="Xbox")
+              li.fourth__item-platform
+                a.fourth__link(href="#" target="_blank")
+                  img.fourth__logo(src="../img/stadia-icon.svg" alt="Stadia")
+              li.fourth__item-platform
+                a.fourth__link(href="#" target="_blank")
+                  img.fourth__logo(src="../img/ps4-icon.svg" alt="PS4")
+    footer.footer
+      .container
+        .footer__content
+          .footer__content__card
+            img.footer__content__card__img(src="../img/logo.svg" alt="Логотип")
+            img.footer__content__card__img(src="../img/cd-project-logo.svg")
+          
+          .footer__content__card
+            ul.footer__content__card__list
+              li.footer__content__card__item
+                p.footer__content__card__p Лицензия
+              li.footer__content__card__item
+                p.footer__content__card__p Политика конфиденциальности
+        .footer__copyright
+          p.footer__sub 
+          | CD PROJEKT
+          | &#9415;, Cyberpunk
+          | &#9415;, Cyberpunk 2077
+          | &#9415;
+            
