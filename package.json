@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "name": "cyberpunk",
+  "description": "Landing page of the game",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asyaLebedeva/cyperpunk.git"
+  },
+  "keywords": [
+    "pug",
+    "scss",
+    "gulp",
+    "figma",
+    "grid"
+  ],
+  "author": "Asya Lebedeva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asyaLebedeva/cyperpunk/issues"
+  },
+  "homepage": "https://github.com/asyaLebedeva/cyperpunk#readme"
+}
