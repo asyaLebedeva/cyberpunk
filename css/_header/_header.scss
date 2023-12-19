@@ -1,0 +1,56 @@
+@import '../_vars/vars';
+@import '../_mixins/mixins';
+
+.header {
+  position: $relat;
+  margin-bottom: $seventy;
+  min-height: 62.5rem;
+  background: url('../../img/label.jpg') no-repeat top right;
+    .container {
+      padding-top: 20px;
+    }
+  
+    &__top,
+    &__list {
+      display: $flex;
+    }
+
+    &__top {
+      justify-content: $between;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 40px;
+    }
+
+    &__p {
+      margin-bottom: 25px;
+      width: 484px;
+      font-family: $font-2;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    &__btn {
+      padding: 19px 50px;
+      display: $block;
+      width: 272px;
+      min-height: 78px;
+      font-family: $font;
+      font-size: 24px;
+      color: $acid;
+      line-height: 40px;
+      background-color: $black; 
+    }
+
+    &__div {
+      position: absolute;
+      bottom: 0;
+      right: 320px;
+      padding: 60px;
+      width: 624px;
+      min-height: 340px;
+      background: url('../../img/Rectangle\ 59.png') no-repeat;
+    }
+}

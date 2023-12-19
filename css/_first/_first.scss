@@ -1,0 +1,36 @@
+/* first section */
+@import '../_vars/vars';
+@import '../_mixins/mixins';
+
+.first {
+  &__title {
+    @include title;
+  }
+  
+  &__description {
+    @include txt();
+    margin-bottom: $seventy;
+    color: $grey;
+      strong {
+        @include coloring;
+      }
+  }
+
+  &__pic {
+    display: $grid;
+    grid-template-columns: repeat(2, 1fr);
+      &__img1 {
+        grid-area: 'one';
+      }
+      &__img2 {
+        grid-area: 'one';
+      }
+      &__img3 {
+        grid-area: 'large';
+      }
+    grid-template-rows: 196px;
+    gap: 32px;
+    grid-template-areas: 
+      'one large';
+  }
+}

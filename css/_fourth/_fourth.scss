@@ -1,0 +1,74 @@
+@import '../_vars/vars', '../_mixins/mixins';
+.fourth {
+  margin-bottom: 13px;
+  .container {
+    max-width: 1920px;
+    display: grid;
+    grid-template-columns: repeat(2, 800px);
+    grid-template-rows: auto;
+    grid-template-areas: 
+      'pic box';
+  }
+
+  &__pic {
+    grid-area: pic;
+    height: 717px;
+  }
+
+  &__box {
+    grid-area: box;
+    color: $white;
+    background-color: $black;
+  }
+
+  &__title {
+    @include title;
+    color: $white;
+    max-width: 624px;
+  }
+
+  &__min-title {
+    @include coloring;
+  }
+
+  &__list {
+    @include submit;
+    font-weight: 400;
+    &__item {
+      padding-left: 45px;
+      background-repeat: no-repeat;
+      &:not(:last-child) {
+        margin-bottom: 21px;
+      }
+      &:first-child {
+        background-image: url('../../img/disk.svg');
+      }
+      &:nth-child(2) {
+        background-image: url('../../img/wysiwyg.svg');
+      }
+      &:last-child {
+        background-image: url('../../img/collections.svg');
+      }
+      line-height: 32px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__box {
+    padding-top: 70px;
+    padding-left: 32px;
+  }
+
+  &__span {
+    margin-bottom: 25px;
+    @include coloring;
+  }
+
+  &__list-platform {
+    display: $grid;
+    max-width: 320px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 55px;
+  }
+}

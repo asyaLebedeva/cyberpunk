@@ -1,0 +1,79 @@
+@import '../_vars/vars', '../_mixins/mixins';
+
+.third {
+  margin-top: -20px;
+  margin-bottom: 0;
+  color: $black;
+  background-color: $acid;
+
+  &__title {
+    @include title;
+  }
+
+  &__subscribe {
+    @include txt;
+    max-width: 624px;
+  }
+
+  .container {
+    padding-top: $seventy;
+    padding-bottom: $seventy;
+    display: grid;
+    grid-template-columns: repeat(2, 624px);
+    grid-row: auto;
+    gap: 32px;
+    grid-template-areas: 
+      'oneBox twoBox';
+  }
+
+  &__div {
+    grid-area: oneBox;
+  }
+
+  &__content {
+    grid-area: twoBox;
+
+    &__list {
+      margin-bottom: 40px;
+      @include txt;
+      &__item {
+        background-repeat: no-repeat;
+        padding-left: 38px;
+
+      &:not(:last-child) {
+        margin-bottom: 26px;
+      }
+
+      &:first-child {
+          background-image: url('../../img/color_lens.svg');
+        }
+  
+      &:nth-child(2) {
+          background-image: url('../../img/auto_awesome.svg');
+        }
+  
+      &:last-child {
+          background-image: url('../../img/auto_awesome_motion.svg');
+        }
+      }
+    }
+    &__btn {
+      padding: 15px 50px;
+      width: 194px;
+      height: 59px;
+      background-color: $black;
+      color: $acid;
+      @include submit;
+    }
+  }
+
+  &__list {
+    display: $flex;
+    justify-content: $center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 25px;
+    align-self: $center;
+  }
+}

@@ -1,0 +1,17 @@
+@import '../_vars/vars', '../_mixins/mixins';
+
+body {
+  max-width: 1920px;
+  margin: $auto;
+  font-family: $font;
+  overflow-x: $hidden;
+}
+
+.container {
+  max-width: $true;
+  margin: $auto;
+}
+
+section {
+  margin-bottom: $seventy;
+}

@@ -1,0 +1,47 @@
+@import '../_vars/vars';
+@import '../_mixins/mixins';
+
+.footer {
+  .container {
+    max-width: 1920px;
+  }
+  &__content {
+    max-width: 1280px;
+    display: $flex;
+    justify-content: $between;
+
+    &__card {
+      &:first-of-type {
+        justify-content: flex-end;
+      }
+      justify-content: $center;
+      &__img:first-of-type {
+        margin-right: 32px;
+      }
+
+      &__list {
+        display: $flex;
+      }
+      &__item {
+        @include submit;
+        font-weight: 400;
+        &:not(:last-child) {
+          margin-right: 32px;
+        }
+      }
+    }  
+  }
+
+  &__copyright {
+    padding: 13px 0;
+    background-color: $black;
+    color: $white;
+    text-align: $center;
+  }
+
+  &__sub {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}

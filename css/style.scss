@@ -1,0 +1,9 @@
+@use '../css/_body/body';
+@use '../css/_header/header';
+@use '../css/_first/first';
+@use '../css/_second/second';
+@use '../css/_third/third';
+@use '../css/_fourth/fourth';
+@use '../css/_footer/footer';
+
+@import url('_base/normalize.css'), url('_base/_reset.css'), url('_base/_fonts.css');

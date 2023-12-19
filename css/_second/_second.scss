@@ -1,0 +1,164 @@
+@import '../_vars/vars';
+@import '../_mixins/mixins';
+
+.second {
+  margin-bottom: 0;
+  padding-top: $seventy;
+  padding-bottom: $seventy;
+  background: 
+    url('../../img/background.png'),
+    url('../../img/yellow.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: top 10px right, bottom 10px right;
+  color: $white;
+    .pack {
+      background-color: $black;
+      padding-bottom: $seventy;
+    }
+
+    .container {
+      background-color: $black;
+    }
+    &__name {
+      display: $flex;
+      margin-bottom: 25px;
+      min-height: 132px;
+      &__discount {
+        margin-right: 32px;
+      }
+      &__title {
+        @include title;
+        align-self: flex-end;
+        color: $white;
+      }
+    }
+
+    &__p {
+      @include txt();
+      margin-bottom: $seventy;
+      strong {
+        @include coloring;
+        margin-bottom: 25px;
+      }
+    }
+
+    &__form {
+      max-width: 460px;
+      grid-area: fit;
+      &__name,
+      &__email {
+        margin-bottom: 35px;
+        width: 460px;
+        height: 35px;
+        padding: 0;
+        padding-bottom: 13px;
+        background: $black;
+        border: transparent;
+        outline: transparent;
+        border-bottom: 1px solid $grey;
+        @include placeholder;
+        color: $white;
+      }
+
+      &__name::placeholder,
+      &__email::placeholder { 
+          @include placeholder;
+          color: $grey;
+       }
+
+      &__filebox {
+        margin-bottom: 35px;
+        padding-top: 40px;
+        width: 460px;
+        height: 120px;
+        background: $black;
+        border: 1px dashed $grey;
+        text-align: $center;
+      }
+
+      &__label {
+        outline: none;
+        white-space: nowrap;
+        -webkit-user-select: none;
+        cursor: pointer;
+        color: $white;
+        font-weight: 400;
+        font-size: 18px;
+        text-decoration: underline;
+      }
+
+      &__span {
+        @include placeholder;
+      }
+
+      &__btn {
+        margin-bottom: 15px;
+        padding: 15px 50px;
+        width: 192px;
+        min-height: 59px;
+        @include submit;
+        background-color: $acid;
+        color: $black;
+        text-align: $center;
+      }
+
+      &__privacy {
+        display: $flex;
+        width: 290px;
+        justify-content: $between;
+        align-self: $center;
+        &__check {
+          display: none;
+        }
+
+        &__label {
+          display: inline-block;
+          cursor: pointer;
+          position: $relat;
+          font-size: 18px;
+        }
+
+        &__label:before {
+          content: '';
+          display: inline-block;
+          position: $abs;
+          left: 0;
+          bottom: 1px;
+          width: 14px;
+          height: 14px;
+          background-color: $black;
+          border: 1px solid $grey;
+        }
+
+        &__check:checked + &__label:before {
+          content: '\2713';
+          font-size: 18px;
+          color: $acid;
+          text-align: $center;
+          line-height: $std;
+        }
+
+        &__agree {
+          font-family: 'Roboto', sans-serif;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 14px;
+          color: $white;
+        }
+      }
+    }
+
+    &__image {
+      grid-area: playstation;
+    }
+
+    &__box {
+      display: grid;
+      grid-template-columns: repeat(2, 460px);
+      grid-template-rows: auto;
+      gap: 30;
+      grid-template-areas: 
+        'fit playstation';
+    }
+  }
